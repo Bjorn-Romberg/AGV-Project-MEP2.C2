@@ -114,7 +114,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x128
+.text           0x00000000      0x12c
  *(.vectors)
  .vectors       0x00000000       0xe4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6/crtm2560.o
                 0x00000000                __vectors
@@ -226,17 +226,17 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a
                 0x00000116                __vector_20
                 0x00000116                __vector_42
  .text          0x0000011a        0x0 obj\Debug\fuse.o
- .text          0x0000011a        0xa obj\Debug\main.o
+ .text          0x0000011a        0xe obj\Debug\main.o
                 0x0000011a                main
- .text          0x00000124        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_exit.o)
-                0x00000124                . = ALIGN (0x2)
+ .text          0x00000128        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_exit.o)
+                0x00000128                . = ALIGN (0x2)
  *(.text.*)
- .text.libgcc   0x00000124        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_exit.o)
-                0x00000124                . = ALIGN (0x2)
+ .text.libgcc   0x00000128        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_exit.o)
+                0x00000128                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000124        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_exit.o)
-                0x00000124                exit
-                0x00000124                _exit
+ .fini9         0x00000128        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_exit.o)
+                0x00000128                exit
+                0x00000128                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -255,11 +255,11 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000124        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_exit.o)
+ .fini0         0x00000128        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000128                _etext = .
+                0x0000012c                _etext = .
 
-.data           0x00800200        0x0 load address 0x00000128
+.data           0x00800200        0x0 load address 0x0000012c
                 0x00800200                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800200        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6/crtm2560.o
@@ -284,8 +284,8 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a
  *(.bss*)
  *(COMMON)
                 0x00800200                PROVIDE (__bss_end, .)
-                0x00000128                __data_load_start = LOADADDR (.data)
-                0x00000128                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000012c                __data_load_start = LOADADDR (.data)
+                0x0000012c                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800200        0x0
                 0x00800200                PROVIDE (__noinit_start, .)
@@ -358,16 +358,16 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a
  .debug_pubnames
                 0x0000001d       0x1b obj\Debug\main.o
 
-.debug_info     0x00000000      0x124
+.debug_info     0x00000000      0x133
  *(.debug_info)
  .debug_info    0x00000000       0xae obj\Debug\fuse.o
- .debug_info    0x000000ae       0x76 obj\Debug\main.o
+ .debug_info    0x000000ae       0x85 obj\Debug\main.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev   0x00000000       0xb4
+.debug_abbrev   0x00000000       0xc3
  *(.debug_abbrev)
  .debug_abbrev  0x00000000       0x73 obj\Debug\fuse.o
- .debug_abbrev  0x00000073       0x41 obj\Debug\main.o
+ .debug_abbrev  0x00000073       0x50 obj\Debug\main.o
 
 .debug_line     0x00000000       0xd3
  *(.debug_line)
@@ -378,12 +378,12 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a
  *(.debug_frame)
  .debug_frame   0x00000000       0x20 obj\Debug\main.o
 
-.debug_str      0x00000000       0xd2
+.debug_str      0x00000000       0xdf
  *(.debug_str)
  .debug_str     0x00000000       0xc6 obj\Debug\fuse.o
                                  0xfa (size before relaxing)
- .debug_str     0x000000c6        0xc obj\Debug\main.o
-                                 0xe1 (size before relaxing)
+ .debug_str     0x000000c6       0x19 obj\Debug\main.o
+                                 0xee (size before relaxing)
 
 .debug_loc
  *(.debug_loc)

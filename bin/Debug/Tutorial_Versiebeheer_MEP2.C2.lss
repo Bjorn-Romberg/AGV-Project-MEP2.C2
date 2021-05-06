@@ -3,23 +3,23 @@ bin\Debug\Tutorial_Versiebeheer_MEP2.C2.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         00000128  00000000  00000000  00000074  2**1
+  0 .text         0000012c  00000000  00000000  00000074  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .fuse         00000003  00820000  00820000  0000019c  2**0
+  1 .fuse         00000003  00820000  00820000  000001a0  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .debug_aranges 00000020  00000000  00000000  0000019f  2**0
+  2 .debug_aranges 00000020  00000000  00000000  000001a3  2**0
                   CONTENTS, READONLY, DEBUGGING
-  3 .debug_pubnames 00000038  00000000  00000000  000001bf  2**0
+  3 .debug_pubnames 00000038  00000000  00000000  000001c3  2**0
                   CONTENTS, READONLY, DEBUGGING
-  4 .debug_info   00000124  00000000  00000000  000001f7  2**0
+  4 .debug_info   00000133  00000000  00000000  000001fb  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_abbrev 000000b4  00000000  00000000  0000031b  2**0
+  5 .debug_abbrev 000000c3  00000000  00000000  0000032e  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_line   000000d3  00000000  00000000  000003cf  2**0
+  6 .debug_line   000000d3  00000000  00000000  000003f1  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_frame  00000020  00000000  00000000  000004a4  2**2
+  7 .debug_frame  00000020  00000000  00000000  000004c4  2**2
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_str    000000d2  00000000  00000000  000004c4  2**0
+  8 .debug_str    000000df  00000000  00000000  000004e4  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -97,7 +97,7 @@ Disassembly of section .text:
   f4:	12 e0       	ldi	r17, 0x02	; 2
   f6:	a0 e0       	ldi	r26, 0x00	; 0
   f8:	b2 e0       	ldi	r27, 0x02	; 2
-  fa:	e8 e2       	ldi	r30, 0x28	; 40
+  fa:	ec e2       	ldi	r30, 0x2C	; 44
   fc:	f1 e0       	ldi	r31, 0x01	; 1
   fe:	00 e0       	ldi	r16, 0x00	; 0
  100:	0b bf       	out	0x3b, r16	; 59
@@ -108,7 +108,7 @@ Disassembly of section .text:
  10a:	b1 07       	cpc	r27, r17
  10c:	d9 f7       	brne	.-10     	; 0x104 <__do_copy_data+0x10>
  10e:	0e 94 8d 00 	call	0x11a	; 0x11a <main>
- 112:	0c 94 92 00 	jmp	0x124	; 0x124 <_exit>
+ 112:	0c 94 94 00 	jmp	0x128	; 0x128 <_exit>
 
 00000116 <__bad_interrupt>:
  116:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
@@ -122,12 +122,14 @@ int main(void)
 {
  11a:	df 93       	push	r29
  11c:	cf 93       	push	r28
- 11e:	cd b7       	in	r28, 0x3d	; 61
- 120:	de b7       	in	r29, 0x3e	; 62
- 122:	ff cf       	rjmp	.-2      	; 0x122 <main+0x8>
+ 11e:	0f 92       	push	r0
+ 120:	0f 92       	push	r0
+ 122:	cd b7       	in	r28, 0x3d	; 61
+ 124:	de b7       	in	r29, 0x3e	; 62
+ 126:	ff cf       	rjmp	.-2      	; 0x126 <main+0xc>
 
-00000124 <_exit>:
- 124:	f8 94       	cli
+00000128 <_exit>:
+ 128:	f8 94       	cli
 
-00000126 <__stop_program>:
- 126:	ff cf       	rjmp	.-2      	; 0x126 <__stop_program>
+0000012a <__stop_program>:
+ 12a:	ff cf       	rjmp	.-2      	; 0x12a <__stop_program>

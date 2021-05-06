@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1620287755 source:c:\users\bjorn\onedrive\documenten\hhs\microcontroller programmeren\tutorial_versiebeheer_mep2.c2\fuse.c
+	<avr/io.h>
+
