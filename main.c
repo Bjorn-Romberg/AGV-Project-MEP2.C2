@@ -11,5 +11,6 @@ int main(void)
     while(1)
     ;
  int github_werkt;
+ int github_werkt_niet_meer;
     return 0;
 }
